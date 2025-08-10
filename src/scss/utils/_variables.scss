@@ -1,0 +1,46 @@
+:root {
+  // FONTS
+
+  --regular: 400;
+  --semibold: 600;
+  --bold: 700;
+
+  --font-display: "Young Serif", serif;
+  --font-body: "Outfit", sans-serif;
+
+  // COLORS
+
+  --white: hsl(0, 0%, 100%);
+
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+
+  --brown-800: hsl(14, 45%, 36%);
+
+  --rose-50: hsl(330, 100%, 98%);
+  --rose-800: hsl(332, 51%, 32%);
+
+  // SIZES
+
+  --space-0: 0; // 0px
+  --space-50: 0.25rem; // 4px
+  --space-100: 0.5rem; // 8px
+  --space-150: 0.75rem; // 12px
+  --space-200: 1rem; // 16px
+  --space-250: 1.25rem; // 20px
+  --space-300: 1.5rem; // 24px
+  --space-400: 2rem; // 32px
+  --space-500: 2.5rem; // 40px
+  --space-600: 3rem; // 48px
+  --space-700: 3.5rem; // 56px
+  --space-800: 4rem; // 64px
+  --space-900: 4.5rem; // 72px
+  --space-1000: 5rem; // 80px
+  --space-1050: 5.5rem; // 88px
+  --space-1100: 6rem; // 96px
+  --space-1400: 7rem; // 112px
+  --space-1500: 7.5rem; // 120px
+  --space-1600: 8rem; // 128px
+}

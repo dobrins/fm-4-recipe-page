@@ -1,0 +1,10 @@
+@use "../utils" as *;
+
+main {
+  padding-block: var(--space-1600);
+  padding-inline: 4.75rem;
+
+  @include mq(s) {
+    padding: 0;
+  }
+}

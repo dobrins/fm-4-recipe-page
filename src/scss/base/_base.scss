@@ -1,0 +1,8 @@
+@use "../utils" as *;
+
+body {
+  @include preset(4);
+  font-family: var(--font-body);
+  color: var(--stone-600);
+  background-color: var(--stone-100);
+}

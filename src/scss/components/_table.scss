@@ -1,0 +1,19 @@
+@use "../utils" as *;
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  & > * {
+    padding-block: var(--space-150);
+    padding-inline-start: var(--space-400);
+
+    &:not(:nth-last-child(-n + 2)) {
+      border-block-end: 1px solid var(--stone-150);
+    }
+  }
+
+  strong {
+    color: var(--brown-800);
+  }
+}

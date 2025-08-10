@@ -1,0 +1,114 @@
+@use "../utils" as *;
+
+.article {
+  display: grid;
+  gap: var(--space-400);
+  max-width: 46rem;
+  padding: var(--space-500);
+  margin-inline: auto;
+  background-color: var(--white);
+  border-radius: var(--space-300);
+
+  @include mq(s) {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  section {
+    display: grid;
+    gap: var(--space-300);
+
+    &:nth-last-child(-n + 2) {
+      border-block-start: 1px solid var(--stone-150);
+      padding-block-start: var(--space-400);
+    }
+
+    @include mq(s) {
+      margin-inline: var(--space-400);
+
+      &:last-child {
+        padding-block-end: var(--space-500);
+      }
+    }
+  }
+
+  h1 {
+    @include preset(1);
+    color: var(--stone-900);
+    margin-block-start: var(--space-100);
+
+    @include mq(s) {
+      font-size: 2.25rem;
+    }
+  }
+
+  h2 {
+    @include preset(2);
+    color: var(--brown-800);
+  }
+
+  img {
+    border-radius: var(--space-150);
+    aspect-ratio: 1/0.456;
+
+    @include mq(s) {
+      border-radius: 0;
+    }
+  }
+
+  ul,
+  ol {
+    display: grid;
+    gap: var(--space-100);
+    margin-inline-start: var(--space-100);
+    padding-inline-start: var(--space-300);
+    counter-reset: counter;
+
+    li {
+      position: relative;
+      counter-increment: counter;
+    }
+  }
+
+  ul li::before {
+    content: "•";
+    color: var(--rose-800);
+    display: inline-block;
+    width: var(--space-200);
+    margin-inline-end: var(--space-100);
+    position: absolute;
+    margin-inline-end: var(--space-100);
+    text-align: start;
+    left: calc(-1 * var(--space-300));
+  }
+
+  strong {
+    @include preset(5);
+  }
+
+  ol {
+    li {
+      &::before {
+        @include preset(5);
+        content: counter(counter) ".";
+        display: inline-block;
+        position: absolute;
+        color: var(--rose-800);
+        width: var(--space-200);
+        margin-inline-end: var(--space-100);
+        text-align: start;
+        left: calc(-1 * var(--space-300));
+      }
+    }
+  }
+
+  &__preparation-time {
+    background-color: var(--rose-50);
+    padding: var(--space-300);
+    border-radius: var(--space-150);
+
+    h2 {
+      @include preset(3);
+    }
+  }
+}
